@@ -1,12 +1,5 @@
-//REF: https://www.hackerrank.com/challenges/magic-square-forming/problem?isFullScreen=true
-
+import { processFileLineByLine } from "../../utils/readLine";
 type Square = number[][];
-
-const input: Square = new Array(
-    new Array(8, 7, 4),
-    new Array(1, 5, 9),
-    new Array(6, 3, 2)
-);
 
 const MAGIC_SQUARE: Square[] = [
     [[8, 1, 6], [3, 5, 7], [4, 9, 2]],
@@ -41,5 +34,17 @@ function formingMagicSquare(s: number[][]): number {
     return minCost;
 }
 
-let result = formingMagicSquare(input);
-console.log(result);
+async function main() {
+    let s: number[][] = Array(3);
+
+    let rawFileLines = await processFileLineByLine(`${__dirname}/input.txt`);
+    for (let i = 0; i < 3; i++) {
+        s[i] = rawFileLines[i].split(' ').map(sTemp => parseInt(sTemp, 10));
+    }
+
+    //RESULT
+    console.log(formingMagicSquare(s));
+
+}
+
+main()
