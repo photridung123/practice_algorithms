@@ -50,10 +50,10 @@ function pickingNumbers(a: number[]): number {
 
 async function main() {
 
-    let rawFileLines = await processFileLineByLine(`${__dirname}/input.txt`);
+    const rawFileLines = await processFileLineByLine(`${__dirname}/input.txt`);
 
     let a = rawFileLines.reduce<number[]>((agr, cur) => {
-        let newArray = cur.replace(/\s+$/g, '').split(' ').map(aTemp => parseInt(aTemp, 10));
+        const newArray = cur.replace(/\s+$/g, '').split(' ').map(aTemp => parseInt(aTemp, 10));
         agr = [...agr, ...newArray];
         return agr
     }, []);
