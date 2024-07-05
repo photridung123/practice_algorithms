@@ -42,3 +42,4 @@ function formingMagicSquare(s: number[][]): number {
 }
 
 let result = formingMagicSquare(input);
+console.log(result);
