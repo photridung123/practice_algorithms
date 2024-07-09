@@ -9,7 +9,7 @@ npm link
 ## Structure
 ```sh
 root
-|__ algorithms              # All algorithms 
+|__ algorithms               # All algorithms 
         |__ <any-item>
             |__input.txt     # Input data
             |__ref.md        # Reference link 
