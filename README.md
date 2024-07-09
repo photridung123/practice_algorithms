@@ -3,6 +3,7 @@
 ## Setup
 ```bash
 npm install
+npm install -g typescript
 npm link
 ```
 
