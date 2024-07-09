@@ -1,8 +1,9 @@
 # Algorithm Notebook
 
-## Install
+## Setup
 ```bash
 npm install
+npm link
 ```
 
 ## Structure
